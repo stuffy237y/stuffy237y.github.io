@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel=stylesheet>
+	<style>
+#itemList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#itemList li {
+  display: block;
+  margin-bottom: 5px;
+  cursor:pointer;
+  color:white;
+}
+
+#itemList li.hide {
+  display: none;
+}
+	</style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="images/stuffy.jpeg">
+            </div>
+            <ul class = "nav-area">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games/">Games</a></li>
+            </ul>
+        </div>
+        <div class = "welcome-text">
+            <h1>Welcome to Stuffy</h1>
+			   <input type="text" id="searchInput" placeholder="Search...">
+		<ul id="itemList">
+		  <li onclick="window.location.href=window.location.href+'/games/slope'">Slope</li>
+		  <li onclick="window.location.href=window.location.href+'/games/clusterrush'">Cluster Rush</li>
+		  <li onclick="window.location.href=window.location.href+'/games/1v1.lol'">1v1.lol</li>
+		  <li onclick="window.location.href=window.location.href+'/games/timeshooter3'">Timeshooter 3</li>
+		  <li onclick="window.location.href=window.location.href+'/games/yohoho'">Yohoho</li>
+		</ul>
+            </div>
+        </div>
+		
+    </header>
+	<script>
+const searchInput = document.getElementById('searchInput');
+const itemList = document.getElementById('itemList');
+const items = Array.from(itemList.getElementsByTagName('li'));
+
+searchInput.addEventListener('input', function() {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  items.forEach(function(item) {
+    const itemName = item.textContent.toLowerCase();
+
+    if (itemName.includes(searchTerm)) {
+      item.classList.remove('hide');
+    } else {
+      item.classList.add('hide');
+    }
+  });
+});
+	</script>
+</body>
+</html>
