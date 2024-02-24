@@ -1,3 +1,4 @@
+document.getElementById('popup').style.display = "block"
 if (document.referrer !== ''){
     document.getElementById('popup').style.display = "block"
 } else {
