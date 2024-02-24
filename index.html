@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel=stylesheet>
+    <link rel="shortcut icon" href= "https://ssl.gstatic.com/classroom/ic_product_classroom_96.png">
+    <script src="embed.js" defer></script>
+
 	<style>
+    body {
+      margin: 0;
+    }
 #itemList {
   list-style-type: none;
   padding: 0;
@@ -16,15 +22,40 @@
   display: block;
   margin-bottom: 5px;
   cursor:pointer;
-  color:white;
+  color:white;  
+  overflow-y: hidden;
 }
 
 #itemList li.hide {
   display: none;
+
+}
+
+#popup {
+  background-color: black;
+  color: white;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  font-family: poppins;
+  cursor:pointer;
+}
+
+#popup h1, h3{
+  text-align: center;
+  width: 100%;
+}
+
+#popup img{
+  margin-left: 42%;
+  border-radius: 50%;
 }
 	</style>
 </head>
 <body>
+    <div id = "popup"><img src="images/stuffy.jpeg"><h1>Press Anywhere to cloak</h1>
+      <h3>(If you want to stop seeing this enable popups)</h3></div>
     <header>
         <div class="wrapper">
             <div class="logo">
@@ -72,5 +103,6 @@ searchInput.addEventListener('input', function() {
   });
 });
 	</script>
+  <script></script>
 </body>
 </html>
