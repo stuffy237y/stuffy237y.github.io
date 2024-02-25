@@ -1,11 +1,6 @@
-document.getElementById('popup').style.display = "block"
-if (document.referrer !== ''){
-    document.getElementById('popup').style.display = "block"
-} else {
-    document.getElementById('popup').style.display = 'none'
-}
+var popup= document.getElementById('popup')
 
-window.addEventListener('click', function(event) {
+popup.addEventListener('click', function(event) {
     event.preventDefault();
     var win = window.open('about:blank')
     win.document.title = "Home"
