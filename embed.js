@@ -31,3 +31,4 @@ popup.addEventListener('click', function(event) {
     iframe2.src = 'index.html';
     win2.document.body.appendChild(iframe2);
     win2.document.head.append(link2)
+    window.location.replace("https://classroom.google.com");
