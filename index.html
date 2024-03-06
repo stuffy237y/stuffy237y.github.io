@@ -7,7 +7,11 @@
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel=stylesheet>
     <link rel="shortcut icon" href= "https://ssl.gstatic.com/classroom/ic_product_classroom_96.png">
-    
+    <script>
+      window.addEventListener("contextmenu", (e) => {
+        e.preventDefault()
+      })
+    </script>
 
 	<style>
     body {
@@ -72,19 +76,14 @@ font-size: 20px;
 	</style>
 </head>
 <body>
-    <div id = "popup"><img src="images/stuffy.jpeg"><h1>Press Anywhere to cloak</h1>
-      <h3>(If you want to stop seeing this enable popups)</h3></div>
+  <div id = "popup"><img src="images/stuffy.jpeg"><h1>Press Anywhere to cloak</h1>
+    <h3>(If you want to stop seeing this enable popups)</h3></div>
     <header>
-        <div class="wrapper">
-            <div class="logo">
-                <img src="images/stuffy.jpeg">
+        <div class = "welcome-text"> 
+          <div class="logo">
+                <img src="images/stuffy.jpeg" draggable="false">
             </div>
-            <ul class = "nav-area">
-                <li><a href="https://reading-labs.github.io">Home</a></li>>
-            </ul>
-        </div>
-        <div class = "welcome-text">
-            <h1>Welcome to Stuffy</h1>
+            <h1>Nothing to see here</h1>
 			   <input type="text" id="searchInput" placeholder="Search...">
 		<ul id="itemList">
 		  <li onclick="window.location.href='/gameIframe/#slope'">Slope</li>
