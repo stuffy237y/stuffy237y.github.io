@@ -8,12 +8,11 @@ var scriptContainer = document.getElementById("script-container");
 if (window.parent.location.href !== 'about:blank'){
     popup.style.visibility = "visible"
     scriptContainer.appendChild(script);
+    popup.addEventListener('click', () => {
+      scriptContainer.removeChild(script);
+    })
 } else {
    popup.style.visibility = "hidden"
    console.log(window.parent.location.href)
+   scriptContainer.remove()
 }
-  scriptContainer.appendChild(script);
-  popup.addEventListener('click', () => {
-    scriptContainer.removeChild(script);
-  })
-

@@ -2,7 +2,7 @@ var fragmentIdentifier = window.location.hash.slice(1)
 
 var iframe = document.createElement('iframe');
 
-iframe.src = "https://stuffy237y.github.io" + fragmentIdentifier
+iframe.src = "https://reading-labs.github.io/games/" + fragmentIdentifier
 
 iframe.style.border='none';
 iframe.style.width = '100%' ;
@@ -13,5 +13,5 @@ document.body.appendChild(iframe);
 
 var back = document.getElementById('return')
 back.addEventListener('click', ()=>{
-    window.location.href = "https://stuffy237y.github.io"
+    window.location.href = "https://reading-labs.github.io"
 })
